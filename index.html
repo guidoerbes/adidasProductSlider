@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js    "></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>Adidas Product Slider</title>
+</head>
+<body>
+    <div class="top">
+        <div class="logo"><img src="img/logo1.png" alt=""></div>
+        <nav>
+            <ul>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Momen</a></li>
+                <li><a href="#">Kids</a></li>
+                <li><a href="#">Collection</a></li>
+            </ul>
+        </nav>
+
+
+        <div class="nav">
+            <ul>
+                <li><a href="#"><i class=""fas fa-search"></i></a></li>
+                <li><a href="#"><i class=""fas fa-shopping-cart"></i></a></li>
+                <li><a href="#"><i class=""fas fa-bars"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="social">
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="sm-nav">
+            <ul> 
+                <li onclick="preItem()"><i class="fas fa-chevron-left"></i></li>
+                <li onclick="nextItem()"><i class="fas fa-chevron-right"></i></li>
+            </ul>
+        </div>
+
+        <div class="slider slider-sm">
+            <div class="slid slid1 sm">
+                <img src="img/adidas 1.png" alt="">
+                <div class="text">
+                    <p> Men´s Running Shoes</p>
+                    <h1> Adidas </br> UltraBoost </h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure sed sunt voluptas.</p>
+                </div>
+            </div>
+            <div class="slid slid2 sm">
+                <img src="img/adidas3.png" alt="">
+                <div class="text">
+                    <p> Men´s Running Shoes</p>
+                    <h1> Adidas </br> UltraBoost </h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure sed sunt voluptas.</p>
+                </div>
+            </div>
+            <div class="slid slid3 sm">
+                <img src="img/adidas2.png" alt="">
+                <div class="text">
+                    <p> Men´s Running Shoes</p>
+                    <h1> Adidas </br> UltraBoost </h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure sed sunt voluptas.</p>
+                </div>
+            </div>
+            <div class="slid slid1 sm">
+                <img src="img/adidas4.png" alt="">
+                <div class="text">
+                    <p> Men´s Running Shoes</p>
+                    <h1> Adidas </br> UltraBoost </h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure sed sunt voluptas.</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <script>
+        gsap.from('.slid img,h1',{
+            y: '200%',
+            duration: .5
+        })
+        gsap.from('p',{
+            y: '500%',
+            duration: .5
+        })
+        function nextItem(){
+            gsap.to('.slid', {
+                x: '-100%',
+                duration: .5
+            })
+         }
+         function preItem(){
+            gsap.to('.slid',{
+                x: '100%',
+                duration: 0
+            })
+         }
+    </script>
+    
+</body>
+</html>
